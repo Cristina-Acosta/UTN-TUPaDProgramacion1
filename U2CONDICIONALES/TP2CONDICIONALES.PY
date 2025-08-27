@@ -59,3 +59,34 @@ else:
     print("Contraseña incorrecta (Por favor, ingrese una contraseña de entre 8 y 14 caracteres)")
 
 # 6-escribir un programa que tome la lista numeros_aleatorios, calcule su moda, su mediana y su media y las compare para determinar si hay sesgo positivo, negativo o no hay sesgo. Imprimir el resultado por pantalla.
+
+from statistics import mode,median,mean
+import random
+
+numero: int = [random.randint(1, 100) for i in range(50)]
+
+moda: float= mode(numero)
+mediana: float= median(numero)
+media: float= mean(numero)
+
+if media>mediana and mediana>moda:
+    print("Sesgo positivo o a la derecha")
+elif media<mediana and mediana<moda:
+    print("Sesgo negativo o a la izquierda")
+elif  mediana==moda and mediana==media:
+    print("Sin sesgo")
+else:
+    print("ERROR")
+
+# 7-Escribir un programa que solicite una frase o palabra al usuario. Si el string ingresado termina con vocal, añadir un signo de exclamación al final e imprimir el string resultante por pantalla; en caso contrario, dejar el string tal cual lo ingresó el usuario e imprimirlo por pantalla.
+
+dato: str=input("Ingrese una palabra o frase: ")
+
+if dato.endswith("a","e","i","o","u"):
+    print(f"{dato}!")
+
+# 8- Escribir un programa que solicite al usuario que ingrese su nombre y el número 1, 2 o 3 dependiendo de la opción que desee:
+# 1. Si quiere su nombre en mayúsculas.
+# 2. Si quiere su nombre en minúsculas. 
+# 3. Si quiere su nombre con la primera letra mayúscula.
+# El programa debe transformar el nombre ingresado de acuerdo a la opción seleccionada por el usuario e imprimir el resultado por pantalla.
