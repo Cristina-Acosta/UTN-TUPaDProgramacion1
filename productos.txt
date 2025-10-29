@@ -1,0 +1,4 @@
+nombre	precio	cantidad
+lapicera,120,30
+corrector,150,15
+goma,105,10
